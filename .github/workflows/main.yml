@@ -192,6 +192,7 @@ jobs:
 
         - name: Docker Build
           run: |
+            ls -R
             docker build --tag jorgeavm/cursodevsecops-test:latest .
 
         - name: Push Docker
