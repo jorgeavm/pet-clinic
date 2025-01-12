@@ -185,4 +185,4 @@ jobs:
           uses: actions/download-artifact@master
           with:
             username: JAR
-            password: ${{ github.worspace }}
+            password: ${{ github.workspace }}
