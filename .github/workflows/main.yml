@@ -14,3 +14,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Checkout code
+        run: |
+          chmod 777 gradlew
+          ./gradlew build
