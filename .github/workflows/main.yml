@@ -60,7 +60,7 @@ jobs:
               -d "name=$REPO_NAME" \
               -d "project"="$REPO_NAME" \
               -d "organization=jorgeavm" \
-              -d "proyect=public" \)
+              -d "proyect=public" )
             
             if [ "$response" -ne 201 ]; then
               echo "Proyecto creado exitosamente"
