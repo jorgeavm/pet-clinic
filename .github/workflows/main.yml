@@ -168,7 +168,7 @@ jobs:
           uses: actions/upload-artifact@master
           with:
             name: JAR
-            path: ${{github.workspace}}/build/libds/spring-petclinic-2.6.0.jar
+            path: ${{github.workspace}}/build/libs/spring-petclinic-2.6.0.jar
 
   DockerBuild:
       needs: SCA
@@ -186,3 +186,11 @@ jobs:
           with:
             username: JAR
             password: ${{ github.workspace }}
+
+        - name: Docker Build
+          run: |
+            docker build --tag jorgeavm/cursodevsecops-test:latest .
+
+        - name: Push Docker
+          run: |
+            docker push jorgeavm/cursodevsecops-test:latest
