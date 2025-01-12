@@ -5,26 +5,12 @@ on:
       - feature-clase1
 
 jobs:
-  BUILD:
+  SAST:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Aquí compilamos
-        run:  |
-          echo 'Aquí compilamos'
-
-  TESTING:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: TESTING
-        run:  |
-          echo 'TESTING'
-
-  DEPLOY:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: DEPLOY DSR
-        run:  |
-          echo 'DEPLOY DSR'
+      - name: Set up JDK 17
+        uses: action/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
