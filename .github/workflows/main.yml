@@ -93,8 +93,8 @@ jobs:
             -Dsonar.organization=devsecopsusach \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=$SONAR_TOKEN \
-            -Dsonar.branch.name=$BRANCH_NAME
-            #-Dsonar.branch.name=main
+            #-Dsonar.branch.name=$BRANCH_NAME
+            -Dsonar.branch.name=main
 
       - name: Validate Quality Gate
         env:
